@@ -569,7 +569,7 @@
     
     /* Chat Interface Styles (Hidden by default) - Teal Theme */
     .chat-container {
-      width: 100vw;
+      width: 80vw;
       display: none;
       height: 100vh;
       flex-direction: column;
@@ -919,7 +919,7 @@
     /* Left Sidebar Styles */
     .left {
       display: none;
-      width: 40vw;
+      width: 20vw;
       background-color: white;
       border-right: 1px solid #e6e6e6;
       height: 100vh;
@@ -1366,6 +1366,19 @@
     
     <!-- Chat Interface (Hidden by default) -->
     <div class="chat-container" id="chat-container">
+        <!-- Delete Confirmation Modal -->
+  <div class="modal-overlay" id="delete-confirm-modal">
+    <div style="width: 80vw;" class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Confirm Deletion</h2>
+        <p class="modal-subtitle">Are you sure you want to delete all chat messages?</p>
+      </div>
+      <div class="form-group" style="display: flex; gap: 10px;">
+        <button class="btn" id="confirm-delete-btn">Yes, Delete</button>
+        <button class="btn btn-google" id="cancel-delete-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
       <div class="chat-header">
         <div class="chat-header-left">
           <button class="chat-back-btn" id="chat-back-btn">
@@ -1402,19 +1415,7 @@
     </div>
   </div>
   
-  <!-- Delete Confirmation Modal -->
-  <div class="modal-overlay" id="delete-confirm-modal">
-    <div style="width: 80vw;" class="modal">
-      <div class="modal-header">
-        <h2 class="modal-title">Confirm Deletion</h2>
-        <p class="modal-subtitle">Are you sure you want to delete all chat messages?</p>
-      </div>
-      <div class="form-group" style="display: flex; gap: 10px;">
-        <button class="btn" id="confirm-delete-btn">Yes, Delete</button>
-        <button class="btn btn-google" id="cancel-delete-btn">Cancel</button>
-      </div>
-    </div>
-  </div>
+
   
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
